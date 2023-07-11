@@ -16,7 +16,7 @@ git clone https://github.com/weebwashere/weebs-bot-template.git
 
 ```
 
-**3:** open the command/info folder and make a command named `hello.js` and paste this code:
+**3:** open the command/info folder and make a command file named `hello.js` and paste this code inside:
 ```js
 
 module.exports = {
