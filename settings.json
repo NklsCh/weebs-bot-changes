@@ -1,0 +1,11 @@
+{
+    "token": "your-bot-token",
+    "prefix": ".",
+    "color": {
+        "positive": "GREEN",
+        "negative": "RED",
+        "neutral": "0xADD8E6",
+        "warn": "YELLOW"
+    },
+    "ownerId": "?"
+}

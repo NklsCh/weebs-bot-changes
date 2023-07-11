@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>your-bot-here</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/favicon.ico">
+    <style>
+      /* Default dark mode styles */
+      body {
+        background-color: #1d1d1d;
+        color: #ffffff;
+        font-family: 'Poppins', sans-serif;
+        overflow: hidden;
+        text-align: center; /* Center align all text */
+      }
+
+      h1 {
+        color: #ffffff;
+      }
+
+      /* Light mode styles */
+      .light-mode body {
+        background-color: #ffffff;
+        color: #000000;
+        font-family: 'Poppins', sans-serif;
+      }
+
+      .light-mode h1 {
+        color: #000000;
+      }
+
+      /* Switch styles */
+      /* Switch styles */
+.switch {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.switch input {
+  display: none;
+}
+
+.switch label {
+  display: inline-block;
+  position: relative;
+  width: 40px;
+  height: 20px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.switch label:before,
+.switch label:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.switch label:before {
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  border-radius: 20px;
+}
+
+.switch label:after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+}
+
+.switch input:checked + label:before {
+  background-color: #c4c4c4;
+}
+
+.switch input:checked + label:after {
+  transform: translateX(20px);
+  background-color: #000000;
+}
+
+.switch label:active:before {
+  transform: scale(0.8);
+}
+
+      /* Loading screen styles */
+      .loading-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #1d1d1d;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
+        z-index: 9999;
+      }
+
+      .loading-screen.hide {
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      .loading-screen .spinner {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 4px solid #ffffff;
+        border-top-color: #1d1d1d;
+        animation: spin 1s ease-in-out infinite;
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loading-screen">
+      <div class="spinner"></div>
+    </div>
+
+    <h1>a-guilded-bot</h1>
+    <p>welcome, this a website for your-guilded-bot, a guilded bot thats supposed to be based on fun.</p>
+
+    <!-- Light mode switch -->
+    <div class="switch">
+      <input type="checkbox" id="light-mode-toggle">
+      <label for="light-mode-toggle"></label>
+    </div>
+
+    <script>
+      const toggleSwitch = document.querySelector('#light-mode-toggle');
+      const loadingScreen = document.querySelector('.loading-screen');
+
+      function switchTheme(event) {
+        // Do nothing
+      }
+
+      function hideLoadingScreen() {
+        setTimeout(function() {
+          loadingScreen.classList.add('hide');
+        }, 3000);
+      }
+
+      toggleSwitch.addEventListener('change', switchTheme, false);
+      window.addEventListener('load', hideLoadingScreen, false);
+    </script>
+  </body>
+</html>
