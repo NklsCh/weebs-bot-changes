@@ -34,7 +34,7 @@ module.exports = {
 
       const reminder = await db.collection(MONGODB_COLLECTION_NAME).findOne({ _id: reminderId });
       if (!reminder) {
-        return message.reply(`no reminder found with ID: **${reminderId}**`);
+        return message.reply(`no reminder found with ID: (**${reminderId}**)`);
       }
 
       // Check if the user who created the reminder is the same as the user trying to delete it
@@ -46,7 +46,7 @@ module.exports = {
 
       const embed = new Embed()
         .setColor("#F5C400")
-        .setTitle("DELETED! 🚮")
+        .setTitle("Gotchu! 🚮")
         .setDescription(`Your reminder has been successfully deleted from the system! ID: (**~~${reminderId}~~**)`);
 
       message.reply({ embeds: [embed], isSilent: true })

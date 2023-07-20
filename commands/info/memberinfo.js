@@ -6,7 +6,7 @@ module.exports = {
   run: async (client, message, args) => {
     let user;
     if (!args[0]) {
-      message.reply("please mention someone to view their profile, for example: `r/userinfo (@weebwashere)`");
+      message.reply("please mention someone to view their profile, for example: `.memberinfo (@weebwashere)`");
       return;
     } else {
       user = message.mentions.users[0].id;

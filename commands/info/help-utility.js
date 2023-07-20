@@ -18,7 +18,7 @@ module.exports = {
           ".memberinfo",
           "get information on any user that is inside your current server, for example: \`.memberinfo (user)\`.  :GuildedInfo: "
         )
-        .setThumbnail("https://img.guildedcdn.com/ContentMediaGenericFiles/a9871a37908107b03c651ec17be0d945-Full.webp?w=756&h=756")
+      
       const helpMessage = await message.reply({ embeds: [embed], isSilent: true });
     } catch (error) {
       console.error(error);

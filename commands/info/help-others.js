@@ -15,10 +15,10 @@ module.exports = {
           "create your reminders, for example: \`.create (1m) (silent or private)\`.  :GuildedInfo: "
         )
         .addField(
-          ".delete (ID required)",
-          "delete your reminders, for example: \`.delete (000000)\`. :GuildedInfo: "
+          ".remove (ID required)",
+          "delete your reminders, for example: \`.remove (ID)\`. :GuildedInfo: "
         )
-        .setThumbnail("https://img.guildedcdn.com/ContentMediaGenericFiles/a9871a37908107b03c651ec17be0d945-Full.webp?w=756&h=756")
+       
       const helpMessage = await message.reply({ embeds: [embed], isSilent: true });
     } catch (error) {
       console.error(error);

@@ -62,7 +62,7 @@ module.exports = {
 
       const embed = new Embed()
         .setColor("#F5C400")
-        .setTitle("DONE! 📝")
+        .setTitle("Done!")
         .setDescription(`Your reminder has been created, I will remind you in the following time: \`\`\`${time}\`\`\` `)
         .setFooter(`Reminder ID: ${reminderId}`);
 
@@ -80,7 +80,7 @@ module.exports = {
 
           const embed = new Embed()
             .setColor("#F5C400")
-            .setTitle("Time's Up! :GuildedInfoGilded:")
+            .setTitle("Time's Up!")
             .setDescription(`hey there! <@${userId}>, your reminder is up! you have now been reminded.`)
 
           if (option === "private") {
