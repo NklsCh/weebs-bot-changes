@@ -44,7 +44,7 @@ socket.on('message', function incoming(data) {
       body: JSON.stringify({
         embeds: [{
           title: "Hello! I am Reminder.",
-          description: `If you would like to know more use the \`.help\` command. make your own reminders today. 
+          description: `want to see more of my commands? please dont worry! just do the following: \`\`\`.help\`\`\` so what are you waiting for? start creating your reminders today!  
 
  **Links**
 [Support Server](guilded.gg/weebdev)`,
