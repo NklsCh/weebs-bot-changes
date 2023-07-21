@@ -39,7 +39,7 @@ module.exports = {
 
       // Check if the user who created the reminder is the same as the user trying to delete it
       if (reminder.userId !== message.author.id) {
-        return message.reply(`You don't have permission to delete this reminder.`);
+        return message.reply(`it seems you dont have permissions to remove this reminder. you can make your own by doing the following: \`.create [time] [private or silent]\``);
       }
 
       await db.collection(MONGODB_COLLECTION_NAME).deleteOne({ _id: reminderId });
@@ -47,7 +47,7 @@ module.exports = {
       const embed = new Embed()
         .setColor("#F5C400")
         .setTitle("Gotchu! 🚮")
-        .setDescription(`Your reminder has been successfully deleted from the system! ID: (**~~${reminderId}~~**)`);
+        .setDescription(`Your reminder has been successfully removed, with the following ID: \`\`\`${reminderId}\`\`\``);
 
       message.reply({ embeds: [embed], isSilent: true })
         .then((msg) => {

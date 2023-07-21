@@ -32,12 +32,12 @@ module.exports = {
       const option = args.find((arg) => arg === "private" || arg === "silent");
 
       if (!time) {
-        return message.reply("please use the format \`r/create-reminder [time] [silent | private]\` when creating reminders. Thank you.");
+        return message.reply("please use the format \`.create [time] [silent | private]\` when creating reminders. Thank you.");
       }
 
       const timeMs = ms(time);
       if (!timeMs) {
-        return message.reply("please use the format \`r/create-reminder [time] [silent | private]\` when creating reminders. Thank you.");
+        return message.reply("please use the format \`.create [time] [silent | private]\` when creating reminders. Thank you.");
       }
 
       if (timeMs < 60000 || timeMs > 2592000000) {
@@ -63,7 +63,7 @@ module.exports = {
       const embed = new Embed()
         .setColor("#F5C400")
         .setTitle("Done!")
-        .setDescription(`Your reminder has been created, I will remind you in the following time: \`\`\`${time}\`\`\` `)
+        .setDescription(`Your reminder has now been made. I will remind you in \`${time}\``.)
         .setFooter(`Reminder ID: ${reminderId}`);
 
       message.reply({ embeds: [embed], isSilent: true })
@@ -81,7 +81,7 @@ module.exports = {
           const embed = new Embed()
             .setColor("#F5C400")
             .setTitle("Time's Up!")
-            .setDescription(`hey there! <@${userId}>, your reminder is up! you have now been reminded.`)
+            .setDescription(`hey there! (<@${userId}>) your reminder is up! you have now been reminded.`)
 
           if (option === "private") {
             message.reply({ embeds: [embed], isPrivate: true })
