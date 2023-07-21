@@ -2,7 +2,7 @@ const { Embed } = require("guilded.js");
 
 module.exports = {
   name: "about",
-  description: "about Reminder (made by weeb)",
+  description: "about Reminder (made by weeb.)",
   run: async (client, message, args) => {
     try {
       const embed = new Embed()
