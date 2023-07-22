@@ -6,11 +6,15 @@ module.exports = {
   run: async (client, message, args) => {
     try {
       const embed = new Embed()
-        .setTitle("Hello! I am Reminder.")
+        .setTitle("About Reminder")
         .setDescription(
-          "I am what people call me on guilded... **Reminder** a guilded bot that was made with node.js, guilded.js, and full of love :BlobCatLove:, how did i come up with this idea? well originally found the idea from just trying to be creative and make a bot what wasnt on guilded yet, and there came.. Reminder."
+          "Reminder was made with ❤️ by me, [weebwashere](https://www.guilded.gg/u/weebwashere) a upcoming guilded bot developer just trying to be creative."
         )
-        .addField("Thanks to the following supporters:", "YumYummity, NotAussie, hoemotion, TooMuchHam, notisa, K1RΔΔ, and **everyone** else for supporting me in this project!");
+        .addField("what was the purpose?", "the purpose of me making reminder was for my goal. to make a bot that either nobody has made, or updated. then something came to my mind.. why not make a reminder bot? (lol)."
+        )
+        .addField("Supporters", "i could'nt have even made reminder without the people supporting reminder, so thank you to everybody who's helped me throughout this journey. gonna still update the bot with more amazing things in the future."
+        )
+        .addField("how was it made?", "Reminder was made with [Node.js](https://nodejs.org/en), [Express](https://expressjs.com), [Guilded.js](https://guilded.js.org/), and also [MongoDB](https://www.mongodb.com/).");
       message.reply({ embeds: [embed], isSilent: true });
     } catch (error) {
       console.error(`Errors occurred while running this command: ${error}`);

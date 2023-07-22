@@ -11,14 +11,27 @@ module.exports = {
         .setTitle("prefix is .")
         .setColor("#F5C400")
         .addField(
-          ".help-utility",
-          "get utility-based commands  :GuildedInfo: "
+          ".memberinfo",
+          "get info for a server member, for example: \`.memberinfo [@weebwashere]\`"
         )
         .addField(
-          ".help-others",
-          "get commands for creating reminders. :GuildedInfo: "
+          ".serverinfo",
+          "get info on your servers your in."
         )
-        .setFooter(`Reminder is in ${client.servers.cache.size} servers.`);
+        .addField(
+          ".create",
+          "create your own reminders, for example: \`.create [time] [message]\`"
+        )
+        .addField(
+          ".remove",
+          "remove your reminders, for example: \`.remove [ID]\`"
+        )
+        .addField(
+          ".about",
+          "get information about Reminder."
+        )
+        .setThumbnail("https://img.guildedcdn.com/WebhookThumbnail/8b50aa40900db54099275a22b8906346-Full.webp?w=160&h=160")
+        .setFooter(`operating in ${client.servers.cache.size} servers.`);
       const helpMessage = await message.reply({ embeds: [embed], isSilent: true });
     } catch (error) {
       console.error(error);
