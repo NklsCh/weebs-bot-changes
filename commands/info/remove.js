@@ -29,17 +29,17 @@ module.exports = {
     try {
       const reminderId = args[0];
       if (!reminderId) {
-        return message.reply("please provide a reminder ID to delete.");
+        return message.reply({content: "please provide a reminder ID to remove.", isSilent: true})
       }
 
       const reminder = await db.collection(MONGODB_COLLECTION_NAME).findOne({ _id: reminderId });
       if (!reminder) {
-        return message.reply(`no reminder found with ID: (**${reminderId}**)`);
+        return message.reply({content: `no reminder found with ID: (**${reminderId}**) please make sure your pasting the correct id.`, isSilent: true})
       }
 
       // Check if the user who created the reminder is the same as the user trying to delete it
       if (reminder.userId !== message.author.id) {
-        return message.reply(`it seems you dont have permissions to remove this reminder. you can make your own by doing the following: \`.create [time] [private or silent]\``);
+        return message.reply({content: `it seems you dont have permissions to remove this reminder. you can make your own by doing the following: \`.create [time] [private or silent]\``, isSilent: true})
       }
 
       await db.collection(MONGODB_COLLECTION_NAME).deleteOne({ _id: reminderId });
