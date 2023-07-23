@@ -3,7 +3,7 @@ module.exports = {
       console.log(`[ ${client.user.name} ] : Connected to Guilded`)
       await client.fetchServers()
       const status = {
-        content: `in ${client.servers.cache.size} servers.`,
+        content: `operating in ${client.servers.cache.size} servers.`,
         emoteId: 1990593,
       }
       await client.setStatus(status)
