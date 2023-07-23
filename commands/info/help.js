@@ -12,26 +12,25 @@ module.exports = {
         .setColor("#F5C400")
         .addField(
           ".memberinfo",
-          "get info for a server member, for example: \`.memberinfo [@weebwashere]\`"
+          "get info for a server member, by doing the following: \`.memberinfo [@weebwashere]\`"
         )
         .addField(
           ".serverinfo",
-          "get info on your servers your in."
+          "get info a server your in, by doing the following: \`.serverinfo\`"
         )
         .addField(
           ".create",
-          "create your own reminders, for example: \`.create [time] [message]\`"
+          "create your own reminders, by doing the following: \`.create [time] [message]\`"
         )
         .addField(
           ".remove",
-          "remove your reminders, for example: \`.remove [ID]\`"
+          "remove your reminders, by doing the following: \`.remove [ID]\`"
         )
         .addField(
           ".about",
-          "get information about Reminder."
+          "get information about Reminder, by doing the following: \`.about\`"
         )
         .setThumbnail("https://img.guildedcdn.com/WebhookThumbnail/8b50aa40900db54099275a22b8906346-Full.webp?w=160&h=160")
-        .setFooter(`operating in ${client.servers.cache.size} servers.`);
       const helpMessage = await message.reply({ embeds: [embed], isSilent: true });
     } catch (error) {
       console.error(error);
