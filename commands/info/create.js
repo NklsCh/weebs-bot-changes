@@ -29,7 +29,7 @@ module.exports = {
       const userId = message.author.id;
       const time = args[0];
       const reminderText = args.slice(1).join(" ");
-      const reminder = reminderText ? `${reminderText}` : "....";
+      const reminder = reminderText ? `${reminderText}` : "...";
 
       if (!time) {
         return message.reply({content: "please use the format \`.create [time]\` when creating reminders. Thank you.", isSilent: true})
