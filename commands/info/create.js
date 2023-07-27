@@ -2,10 +2,12 @@ const { Embed } = require("guilded.js");
 const ms = require("ms");
 const { MongoClient } = require("mongodb");
 const { v4: uuidv4 } = require("uuid");
+const { db_uri, db_name, db_collection } = require("../../settings.json");
 
-const MONGODB_URI = "mongodb+srv://weebjs:Summer8455@cluster0.ikzk44n.mongodb.net/?retryWrites=true&w=majority";
-const MONGODB_DB_NAME = "Cluster0";
-const MONGODB_COLLECTION_NAME = "reminders";
+
+const MONGODB_URI = db_uri;
+const MONGODB_DB_NAME = db_name;
+const MONGODB_COLLECTION_NAME = db_collection;
 
 let db;
 

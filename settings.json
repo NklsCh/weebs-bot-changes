@@ -1,5 +1,5 @@
 {
-    "token": "gapi_dDkxmG1Q0w8GYT+5FyMV0wA5UOScBUytM6BuzDOJM23Wqw+8u5NMYF+ueT+Ph6atWLj0Woy/JhPyg9b7/QqANQ==",
+    "token": "",
     "prefix": ".",
     "color": {
         "positive": "GREEN",
@@ -7,5 +7,8 @@
         "neutral": "0xADD8E6",
         "warn": "YELLOW"
     },
-    "ownerId": "?"
+    "ownerId": "?",
+    "db_uri": "",
+    "db_name": "",
+    "db_collection": "reminders"
 }

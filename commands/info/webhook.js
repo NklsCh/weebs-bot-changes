@@ -1,7 +1,7 @@
 const WebSocket = require('ws');
+const { token } = require('./settings.json');
 
 // config
-const token = 'gapi_dDkxmG1Q0w8GYT+5FyMV0wA5UOScBUytM6BuzDOJM23Wqw+8u5NMYF+ueT+Ph6atWLj0Woy/JhPyg9b7/QqANQ==';
 const bannedWords = [];
 const socket = new WebSocket('wss://www.guilded.gg/websocket/v1', {
   headers: {

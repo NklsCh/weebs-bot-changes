@@ -1,8 +1,5 @@
 const { Embed } = require("guilded.js");
-const ms = require("ms");
 const { MongoClient } = require("mongodb");
-const { v4: uuidv4 } = require("uuid");
-
 const MONGODB_URI = "mongodb+srv://weebjs:Summer8455@cluster0.ikzk44n.mongodb.net/?retryWrites=true&w=majority";
 const MONGODB_DB_NAME = "Cluster0";
 const MONGODB_COLLECTION_NAME = "reminders";
@@ -17,8 +14,6 @@ MongoClient.connect(MONGODB_URI, { useUnifiedTopology: true })
   .catch((error) => {
     console.error(`MongoDB connection error: ${error}`);
   });
-
-const cooldowns = new Map();
 
 
 module.exports = {

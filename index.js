@@ -1,6 +1,6 @@
 const { Client } = require("guilded.js");
 const { Collection } = require("discord.js");
-const { token, prefix, color, ownerId, mongoURI } = require("./settings.json");
+const { token, prefix, color, ownerId } = require("./settings.json");
 const functions = require("./handlers/functions");
 const client = new Client({token : token});
 

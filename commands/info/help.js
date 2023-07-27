@@ -4,9 +4,7 @@ module.exports = {
   name: "help",
   description: "Displays all available commands.",
   run: async (client, message, args) => {
-    let embed1;
     try {
-      const server = await client.fetchServers();
       const embed = new Embed()
         .setTitle("prefix is .")
         .setColor("#F5C400")
@@ -31,7 +29,7 @@ module.exports = {
           "get information about Reminder, by doing the following: \`.about\`"
         )
         .setThumbnail("https://img.guildedcdn.com/WebhookThumbnail/8b50aa40900db54099275a22b8906346-Full.webp?w=160&h=160")
-      const helpMessage = await message.reply({ embeds: [embed], isSilent: true });
+      await message.reply({ embeds: [embed], isSilent: true });
     } catch (error) {
       console.error(error);
     }
